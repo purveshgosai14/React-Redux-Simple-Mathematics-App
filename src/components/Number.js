@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Button } from 'react-bootstrap';
 
+import { connect } from 'react-redux';
+
 class Number extends Component {
     render() {
         return(
@@ -16,4 +18,11 @@ class Number extends Component {
     }
 }
 
-export default Number;
+function mapStateToProps(state){
+    console.log('mapStateToProps - Number.js', state);
+    return{
+    num:state.num,
+    }
+}
+
+export default connect(mapStateToProps, null)(Number);
