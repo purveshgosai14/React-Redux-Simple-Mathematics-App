@@ -1,4 +1,4 @@
-import { INC_NUMBER } from '../actions/index'
+import { INC_NUMBER, DEC_NUMBER } from '../actions/index'
 
 function performAction(state = { num: 0}, action) {
     switch(action.type){
@@ -6,6 +6,9 @@ function performAction(state = { num: 0}, action) {
             console.log('Action performed from the reducer');
             console.log(state, action);
             let num = state.num+1;
+            return { num };
+        case DEC_NUMBER:
+            num = state.num-1;
             return { num };
         default:
             return state;
