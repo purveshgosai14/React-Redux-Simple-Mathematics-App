@@ -4,8 +4,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 To start an app follow the instruction:
 
-1) # `npm install`
-2) # `npm start`
+1) `npm install`
+2) `npm start`
 
 
 
