@@ -7,14 +7,14 @@ import registerServiceWorker from './registerServiceWorker';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 
-import {incrementNumber} from "./actions/index";
+//import { incrementNumber } from './actions/index';
 import rootReducer from './reducers';
 
 const store= createStore(rootReducer);
 
 store.subscribe(()=>console.log('store', store.getState()));
 
-store.dispatch(incrementNumber(store.getState));
+//store.dispatch(incrementNumber(store.getState));
 
 ReactDOM.render(
     <Provider store={store}>
